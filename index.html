@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,9 @@
     <title>Art Portfolio Home Page</title>
   </head>
   <body>
-    <main class="min-h-screen w-full relative bg-[#E7DFD3]">
+    <main
+      class="min-h-screen w-full relative bg-[#E7DFD3] overflow-x-auto [&::-webkit-scrollbar]:hidden"
+    >
       <!-- Beach background effects Start -->
       <div class="absolute inset-0 z-0 beach-background overflow-scroll">
         <!-- Header Start -->
@@ -25,7 +27,7 @@
             </a>
 
             <!-- Navigation -->
-            <div
+            <!-- <div
               class="flex items-center gap-4 text-sm font-medium text-zinc-800"
             >
               <a href="#work" class="transition hover:text-orange-600">@</a>
@@ -35,7 +37,7 @@
               <a href="#contact" class="transition hover:text-orange-600"
                 >Contact</a
               >
-            </div>
+            </div> -->
           </nav>
         </header>
         <!-- Header End -->
@@ -44,20 +46,27 @@
         <div
           class="relative overflow-hidden before:absolute before:top-0 before:inset-s-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-1 before:transform before:-translate-x-1/2"
         >
-          <div class="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
+          <div class="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20">
+            <!-- profile image -->
+            <div class="flex items-center justify-center pb-8">
+              <img
+                src="img/profilepic.jpg"
+                alt="User avatar"
+                class="size-60 rounded-full object-cover transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:border-transparent"
+              />
+            </div>
             <!-- Announcement Banner -->
             <div class="flex justify-center">
               <a
                 class="hover:bg-white hover:ring-2 hover:ring-rose-700 hover:ring-offset-1 hover:border-transparent hover:shadow-xl transition-all duration-300 ease-in-out inline-flex items-center gap-x-2 bg-layer border border-layer-line text-xs text-layer-foreground p-2 px-3 rounded-full"
-                href="#"
               >
-                The creature behind the brush
+                This is the creature behind the brush
                 <span class="flex items-center gap-x-1">
                   <span
                     class="border-s border-line-2 text-primary ps-2 text-rose-700"
-                    >Find out who</span
+                    >Keep scrolling!</span
                   >
-                  <svg
+                  <!-- <svg
                     class="shrink-0 size-4 text-primary"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -68,44 +77,1013 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
+                  > -->
+                  <!-- <path d="m9 18 6-6-6-6" />
+                  </svg> -->
                 </span>
               </a>
             </div>
             <!-- End Announcement Banner -->
 
             <!-- Title -->
-            <div class="mt-5 max-w-xl text-center mx-auto">
-              <h1
-                class="block font-bold text-foreground text-4xl md:text-5xl lg:text-6xl bg-gradient-to-br from-slate-950 via-slate-900 to-fuchsia-950/50 bg-clip-text text-transparent"
+            <div
+              class="split-text-container flex items-center justify-center w-full px-4 text-center"
+            >
+              <span class="text-part left"
+                ><h1
+                  class="md:text-5xl lg:text-6xl bg-gradient-to-br from-orange-200 via-yellow-300 to-amber-100"
+                >
+                  &nbsp;Hello&nbsp;
+                </h1></span
               >
-                Hello, curious soul...
-              </h1>
+              <span class="text-part right">curious soul</span>
             </div>
+
             <!-- End Title -->
 
             <div class="mt-5 max-w-3xl text-center mx-auto">
               <p class="text-lg text-muted-foreground-2">
-                I welcome you to my world, through an artist’s delightfully
+                I welcome you to my portfolio, through an artist’s delightfully
                 unusual lens...
               </p>
             </div>
 
             <!-- Buttons -->
-            <div class="mt-8 gap-3 flex justify-center">
+            <!-- <div class="mt-8 gap-3 flex justify-center">
               <a
                 class="transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 inline-flex justify-center items-center gap-x-3 text-center text-sm text-white font-medium rounded-full py-3 px-4"
-                href="#"
+                href="#gallery"
               >
                 Proceed With Curiosity
               </a>
-            </div>
+            </div> -->
             <!-- End Buttons -->
           </div>
         </div>
         <!-- Hero Section End -->
+        <!-- Image Gallery Start -->
+        <div
+          id="gallery"
+          class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
+        >
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div class="space-y-2">
+              <img
+                onclick="showToast1()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/barnowl.jpg"
+                alt="Gallery Masonry Image"
+              />
+
+              <img
+                onclick="showToast2()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/jack.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast3()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/duck.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast4()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/pokemon.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast5()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/market2.jpg"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+            <div class="space-y-2">
+              <img
+                onclick="showToast21()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/shock.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast22()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/lifedrawing.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast23()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/redpanda.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast24()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/ekka.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast25()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/ramen.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast26()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/market.jpg"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+
+            <div class="space-y-2">
+              <img
+                onclick="showToast31()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/lifedrawing2.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast32()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/loki.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast33()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/baby.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast34()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/kitchen.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast35()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/sushi.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast36()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/character.jpg"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+            <div class="space-y-2">
+              <img
+                onclick="showToast41()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/singlemotion.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast42()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/zoom.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast43()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/bird.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast44()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/dog.jpg"
+                alt="Gallery Masonry Image"
+              />
+              <img
+                onclick="showToast45()"
+                class="w-full h-auto object-cover rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                src="img/coffee.PNG"
+                alt="Gallery Masonry Image"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Image Gallery End -->
+        <!-- Toast Start -->
+        <!-- Toast 1 -->
+        <div
+          id="toast-1"
+          onclick="hideToast1()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <div class="text-sm">
+              <h3 class="font-semibold text-lg">Barn Owl</h3>
+              <p class="mt-2 text-sm">
+                <img
+                  src="img/barnowl.jpg"
+                  alt="Barn Owl"
+                  class="w-full h-auto rounded-lg mb-2"
+                />
+                Medium: Acrylic <br />
+                "I wanted to integrate glow so this is an experimental piece
+                through self teaching.
+              </p>
+            </div>
+            <button
+              onclick="hideToast1()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Toast 2 -->
+        <div
+          id="toast-2"
+          onclick="hideToast2()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Jack</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/jack.jpg"
+                alt="Jack"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic <br />
+              "I wanted to learn to paint portrait so I have used my art buddy
+              as my subject."
+            </p>
+            <button
+              onclick="hideToast2()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Toast 3 -->
+        <div
+          id="toast-3"
+          onclick="hideToast3()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-md p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Ducks</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/duck.jpg"
+                alt="Ducks"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic + Oil Pastel on a round canvas panel <br />
+              "Just because..."
+            </p>
+            <button
+              onclick="hideToast3()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 4 -->
+        <div
+          id="toast-4"
+          onclick="hideToast4()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Pokemon Fanart</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/pokemon.jpg"
+                alt="Pokemon Fanart"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Watercolour <br />
+              "Pokemon Fanart"
+            </p>
+            <button
+              onclick="hideToast4()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 5 -->
+        <div
+          id="toast-5"
+          onclick="hideToast5()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">First artist alley</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/market2.jpg"
+                alt="First artist alley"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Half table stall setup <br />
+              "First artist alley, I can't say I was prepared but I had fun and
+              I met a lot of people who are of the same interest"
+            </p>
+            <button
+              onclick="hideToast5()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 21 -->
+        <div
+          id="toast-21"
+          onclick="hideToast21()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Shock</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/shock.jpg"
+                alt="Shock Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic <br />
+              "This piece captures the raw emotion of shock and surprise of my
+              art buddy (with their permission of course)."
+            </p>
+            <button
+              onclick="hideToast21()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 22 -->
+        <div
+          id="toast-22"
+          onclick="hideToast22()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Life Drawing</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/lifedrawing.jpg"
+                alt="Life Drawing Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Charcoal + Pastel <br />
+              "20 minute pose"
+            </p>
+            <button
+              onclick="hideToast22()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 23 -->
+        <div
+          id="toast-23"
+          onclick="hideToast23()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-md p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Red Panda</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/redpanda.jpg"
+                alt="Red Panda Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Watercolour <br />
+              "This piece captures the curiosity of red pandas."
+            </p>
+            <button
+              onclick="hideToast23()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 24 -->
+        <div
+          id="toast-24"
+          onclick="hideToast24()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-md p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Ekka</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/ekka.jpg"
+                alt="Ekka Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Watercolour <br />
+              "Won 3rd price in Watercolour category 2023"
+            </p>
+            <button
+              onclick="hideToast24()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 25 -->
+        <div
+          id="toast-25"
+          onclick="hideToast25()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-md p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Ramen</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/ramen.jpg"
+                alt="Ramen Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Aryclic <br />
+              "Attempting another round canvas and I was hungry..."
+            </p>
+            <button
+              onclick="hideToast25()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 26 -->
+        <div
+          id="toast-26"
+          onclick="hideToast26()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Market</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/market.jpg"
+                alt="Market Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Volunteered <br />
+              "Volunteered to showcase my work at one of the local market in
+              Townsville."
+            </p>
+            <button
+              onclick="hideToast26()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 31 -->
+        <div
+          id="toast-31"
+          onclick="hideToast31()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-md p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Life Drawing</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/lifedrawing2.jpg"
+                alt="Life Drawing Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Charcoal + Pastel <br />
+              "2 minutes poses"
+            </p>
+            <button
+              onclick="hideToast31()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 32 -->
+        <div
+          id="toast-32"
+          onclick="hideToast32()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Loki</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/loki.jpg"
+                alt="Loki Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Watercolour <br />
+              "Commission of a colleague's dog"
+            </p>
+            <button
+              onclick="hideToast32()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 33 -->
+        <div
+          id="toast-33"
+          onclick="hideToast33()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Baby</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/baby.jpg"
+                alt="Baby Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic <br />
+              "Practicing portrait by painting my colleague's baby"
+            </p>
+            <button
+              onclick="hideToast33()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 34 -->
+        <div
+          id="toast-34"
+          onclick="hideToast34()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Kitchen...</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/kitchen.jpg"
+                alt="Kitchen Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic on left over MDF board <br />
+              "Just wanting to practice my painting with left over materials"
+            </p>
+            <button
+              onclick="hideToast41()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 35 -->
+        <div
+          id="toast-35"
+          onclick="hideToast35()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-md p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Sushi</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/sushi.jpg"
+                alt="Sushi Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic <br />
+              "Because I was hungry...again."
+            </p>
+            <button
+              onclick="hideToast35()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 36 -->
+        <div
+          id="toast-36"
+          onclick="hideToast36()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-lg p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Character</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/character.jpg"
+                alt="Character Digital Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Digitla art <br />
+              "Took a few days but this is how I imagine our character for the
+              Table Top Role Playing Game would look like as we march through
+              the dungeons."
+            </p>
+            <button
+              onclick="hideToast36()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 41 -->
+        <div
+          id="toast-41"
+          onclick="hideToast41()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Single Motion</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/singlemotion.jpg"
+                alt="Single Motion Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Thread and nails <br />
+              "Over 1 meter board. I used a single thread without breaking to
+              form a picture of a horse which ironically is a symbolism of
+              strength despite the fragility of the thread."
+            </p>
+            <button
+              onclick="hideToast41()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 42 -->
+        <div
+          id="toast-42"
+          onclick="hideToast42()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Single Motion Zoom Up</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/zoom.jpg"
+                alt="Single Motion Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Thread and nails <br />
+              "Zoom up of the work"
+            </p>
+            <button
+              onclick="hideToast42()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 43 -->
+        <div
+          id="toast-43"
+          onclick="hideToast43()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Crimson Rosella</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/bird.jpg"
+                alt="Crimson Rosella Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Acrylic <br />
+              "Practicing painting birds"
+            </p>
+            <button
+              onclick="hideToast43()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 44 -->
+        <div
+          id="toast-44"
+          onclick="hideToast44()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Labrador</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/dog.jpg"
+                alt="Labrador Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Oil Pastel <br />
+              "Practicing painting dogs. It goes woof."
+            </p>
+            <button
+              onclick="hideToast44()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast 45 -->
+        <div
+          id="toast-45"
+          onclick="hideToast45()"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+        >
+          <div
+            onclick="event.stopPropagation()"
+            class="relative w-full max-w-xs p-5 bg-white rounded-xl shadow-2xl"
+          >
+            <h3 class="font-semibold text-lg">Coffee</h3>
+            <p class="mt-2 text-sm">
+              <img
+                src="img/coffee.PNG"
+                alt="Coffee Artwork"
+                class="w-full h-auto rounded-lg mb-2"
+              />
+              Medium: Digital Art <br />
+              "Attempting digital art"
+            </p>
+            <button
+              onclick="hideToast45()"
+              class="absolute top-2 right-2 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <!-- Toast End -->
+        <script>
+          // Show Toast 1
+          function showToast1() {
+            document.getElementById("toast-1").classList.remove("hidden");
+          }
+
+          function hideToast1() {
+            document.getElementById("toast-1").classList.add("hidden");
+          }
+
+          // Show Toast 2
+          function showToast2() {
+            document.getElementById("toast-2").classList.remove("hidden");
+          }
+
+          function hideToast2() {
+            document.getElementById("toast-2").classList.add("hidden");
+          }
+
+          // Show Toast 3
+          function showToast3() {
+            document.getElementById("toast-3").classList.remove("hidden");
+          }
+
+          function hideToast3() {
+            document.getElementById("toast-3").classList.add("hidden");
+          }
+          // Show Toast 4
+          function showToast4() {
+            document.getElementById("toast-4").classList.remove("hidden");
+          }
+
+          function hideToast4() {
+            document.getElementById("toast-4").classList.add("hidden");
+          }
+          // Show Toast 5
+          function showToast5() {
+            document.getElementById("toast-5").classList.remove("hidden");
+          }
+
+          function hideToast5() {
+            document.getElementById("toast-5").classList.add("hidden");
+          }
+          // Show Toast 21
+          function showToast21() {
+            document.getElementById("toast-21").classList.remove("hidden");
+          }
+
+          function hideToast21() {
+            document.getElementById("toast-21").classList.add("hidden");
+          }
+
+          // Show Toast 22
+          function showToast22() {
+            document.getElementById("toast-22").classList.remove("hidden");
+          }
+
+          function hideToast22() {
+            document.getElementById("toast-22").classList.add("hidden");
+          }
+          // Show Toast 23
+          function showToast23() {
+            document.getElementById("toast-23").classList.remove("hidden");
+          }
+
+          function hideToast23() {
+            document.getElementById("toast-23").classList.add("hidden");
+          }
+          // Show Toast 24
+          function showToast24() {
+            document.getElementById("toast-24").classList.remove("hidden");
+          }
+
+          function hideToast24() {
+            document.getElementById("toast-24").classList.add("hidden");
+          }
+          // Show Toast 25
+          function showToast25() {
+            document.getElementById("toast-25").classList.remove("hidden");
+          }
+
+          function hideToast25() {
+            document.getElementById("toast-25").classList.add("hidden");
+          }
+          // Show Toast 26
+          function showToast26() {
+            document.getElementById("toast-26").classList.remove("hidden");
+          }
+
+          function hideToast26() {
+            document.getElementById("toast-26").classList.add("hidden");
+          }
+          // Show Toast 31
+          function showToast31() {
+            document.getElementById("toast-31").classList.remove("hidden");
+          }
+
+          function hideToast31() {
+            document.getElementById("toast-31").classList.add("hidden");
+          }
+          // Show Toast 32
+          function showToast32() {
+            document.getElementById("toast-32").classList.remove("hidden");
+          }
+
+          function hideToast32() {
+            document.getElementById("toast-32").classList.add("hidden");
+          }
+          // Show Toast 33
+          function showToast33() {
+            document.getElementById("toast-33").classList.remove("hidden");
+          }
+
+          function hideToast33() {
+            document.getElementById("toast-33").classList.add("hidden");
+          }
+          // Show Toast 34
+          function showToast34() {
+            document.getElementById("toast-34").classList.remove("hidden");
+          }
+
+          function hideToast34() {
+            document.getElementById("toast-34").classList.add("hidden");
+          }
+          // Show Toast 35
+          function showToast35() {
+            document.getElementById("toast-35").classList.remove("hidden");
+          }
+
+          function hideToast35() {
+            document.getElementById("toast-35").classList.add("hidden");
+          }
+          // Show Toast 36
+          function showToast36() {
+            document.getElementById("toast-36").classList.remove("hidden");
+          }
+
+          function hideToast36() {
+            document.getElementById("toast-36").classList.add("hidden");
+          }
+          // Show Toast 41
+          function showToast41() {
+            document.getElementById("toast-41").classList.remove("hidden");
+          }
+
+          function hideToast41() {
+            document.getElementById("toast-41").classList.add("hidden");
+          }
+          // Show Toast 42
+          function showToast42() {
+            document.getElementById("toast-42").classList.remove("hidden");
+          }
+
+          function hideToast42() {
+            document.getElementById("toast-42").classList.add("hidden");
+          }
+          // Show Toast 43
+          function showToast43() {
+            document.getElementById("toast-43").classList.remove("hidden");
+          }
+
+          function hideToast43() {
+            document.getElementById("toast-43").classList.add("hidden");
+          }
+          // Show Toast 44
+          function showToast44() {
+            document.getElementById("toast-44").classList.remove("hidden");
+          }
+
+          function hideToast44() {
+            document.getElementById("toast-44").classList.add("hidden");
+          }
+          // Show Toast 45
+          function showToast45() {
+            document.getElementById("toast-45").classList.remove("hidden");
+          }
+
+          function hideToast45() {
+            document.getElementById("toast-45").classList.add("hidden");
+          }
+        </script>
       </div>
       <!-- Beach Background Effects End -->
     </main>
